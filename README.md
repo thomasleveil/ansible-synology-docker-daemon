@@ -19,7 +19,7 @@ Any change to the DSM version or Docker version might break this role.
 Role variables
 --------------
 
-The is only one variable: `docker_opts` which is a list of options.
+There is only one variable: `docker_opts` which is a list of options.
 
     docker_opts:
      - --dns 8.8.8.8
