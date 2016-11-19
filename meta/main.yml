@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Thomas LEVEIL
+  description: a role to manage the Docker daemon options on Synology NAS
+  license: WTFPL  
+  min_ansible_version: 1.7
+  #platforms:
+  #- name: Synology
+  #  versions:
+  #  - all
+  #  - 5.0
+  #  - 5.1
+  #  - 5.2
+  #  - 6.0
+  #  - 6.1
+
+  galaxy_tags:
+  - docker
+
+dependencies: []
