@@ -3,7 +3,7 @@ galaxy_info:
   description: a role to manage the Docker daemon options on Synology NAS
   license: WTFPL  
   min_ansible_version: 1.7
-  platforms: []
+  platforms: 
   - name: Synology
     versions:
   #  - all
