@@ -39,7 +39,38 @@ Examples
           - --dns 8.8.4.4
           - --dns 208.67.222.222
           - --ipv6=true
-~
-~
-~
-~
+
+----
+
+How to add this role to your git repository with submodules
+-----------------------------------------------------------
+
+    # new ansible project
+    mkdir ansible-nas
+    cd ansible-nas
+    
+    # initialize git
+    git init
+    
+    # Add the role
+    git submodule add https://github.com/thomasleveil/ansible-synology-docker-daemon.git roles/ansible-synology-docker-daemon
+    
+    # Create a playbook
+    cat <<EOPLAY > synology.yml
+    - hosts: all
+      roles:
+       - ansible-synology-docker-daemon
+      vars:
+        docker_opts:
+          - --dns 8.8.8.8
+          - --dns 8.8.4.4
+          - --dns 208.67.222.222
+          - --ipv6=true
+    EOPLAY
+    
+    git add .gitmodules roles/ansible-synology-docker-daemon/ synology.yml
+    git commit -m "ansible-synology-docker-daemon role"
+    
+    # hack hack hack
+
+
