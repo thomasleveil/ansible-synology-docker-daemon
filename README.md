@@ -6,6 +6,7 @@ This Ansible role manages the Docker daemon options.
 By default, the Synology Docker daemon is started with just the `--ipv6=true` option, I needed to set custom DNS options.
 
 [![Travis CI](https://img.shields.io/travis/thomasleveil/ansible-synology-docker-daemon.svg?style=flat)](https://travis-ci.org/thomasleveil/ansible-synology-docker-daemon)
+[![Ansible Role](https://img.shields.io/badge/role-thomasleveil.ansible--synology--docker--daemon-blue.svg)](https://galaxy.ansible.com/thomasleveil/ansible-synology-docker-daemon/)
 [![Platforms](http://img.shields.io/badge/platforms-Synology 6.0-lightgrey.svg?style=flat)](#)
 
 Requirements
