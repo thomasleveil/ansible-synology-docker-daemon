@@ -1,0 +1,9 @@
+- name: Set docker daemon options
+  lineinfile:
+    dest: /var/packages/Docker/scripts/start-stop-status
+    line: '\g<BEFORE>{{ docker_opts | join(" ") }} &'
+    state: present
+    regexp: ^(?P<BEFORE>\s*"\$\{DockerBin}" daemon ).*&\s*$
+    backrefs: yes
+    backup: yes
+  notify: restart docker
