@@ -12,7 +12,7 @@ By default, the Synology Docker daemon is started with just the `--ipv6=true` op
 Requirements
 ------------
 
-This role was tested with Ansible 2.2. It probably works with 2.0 and 2.1 (let me know).
+This role was tested with Ansible 2.2. It should work with 1.7 and over.
 
 Tested with Synology `DSM 6.0.2-8451 Update 3` which comes with `Docker 1.11.2`.
 
@@ -22,7 +22,7 @@ Any change to the DSM version or Docker version might break this role.
 Role variables
 --------------
 
-There is only one variable: `docker_opts` which is a list of options.
+There is only one variable: `docker_opts` which is a list of [Docker daemon options](https://docs.docker.com/engine/reference/commandline/dockerd/).
 
     docker_opts:
      - --dns 8.8.8.8
