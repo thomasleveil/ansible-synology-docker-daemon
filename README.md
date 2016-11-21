@@ -35,13 +35,7 @@ Examples
 
     - hosts: all
       roles:
-       - ansible-synology-docker-daemon
-      vars:
-        docker_opts:
-          - --dns 8.8.8.8
-          - --dns 8.8.4.4
-          - --dns 208.67.222.222
-          - --ipv6=true
+       - {role: ansible-synology-docker-daemon, docker_opts: [--dns 80.67.169.12, --dns 80.67.169.40, --ipv6=true]}
 
 ----
 
@@ -62,13 +56,7 @@ How to add this role to your git repository with submodules
     cat <<EOPLAY > synology.yml
     - hosts: all
       roles:
-       - ansible-synology-docker-daemon
-      vars:
-        docker_opts:
-          - --dns 8.8.8.8
-          - --dns 8.8.4.4
-          - --dns 208.67.222.222
-          - --ipv6=true
+       - {role: ansible-synology-docker-daemon, docker_opts: [--dns 80.67.169.12, --dns 80.67.169.40, --ipv6=true]}
     EOPLAY
     
     git add .gitmodules roles/ansible-synology-docker-daemon/ synology.yml
